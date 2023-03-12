@@ -7,12 +7,7 @@ MyStore is a single-page application built in Angular, that offers a rich, dynam
 - Checkout products in cart.
 - Calculate cart total in cart.
 
-Start coding by: Nhu Y Ho 
-
-- Clone this repo : https://github.com/nhuyho/udacity-my-store.git;
-- Remove git remote
-- Add new git remote to new service repo
-- Update project name at (package.json,...)
+Start coding by: Birhanemeskel Belaynew
 
 ## Dependencies 
 
