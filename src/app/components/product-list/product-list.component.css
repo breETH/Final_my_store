@@ -1,0 +1,13 @@
+.container {
+  width: 75%;
+  margin: auto;
+  padding-bottom: 2rem;
+}
+
+.list-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+

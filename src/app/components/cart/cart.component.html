@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="left-detail">
+  <div class="left" *ngFor="let item of cartItems">
+    <div class="item-image">
+      <img src={{item.url}}> 
+    </div>
+    <div class="item-detail">
+      <h1>My Cart</h1>
+      <div>{{ item.name }}  </div>
+      <div>{{ item.price }} birr </div>
+      <div>{{item.description}}</div>
+      <div class="product-item-detail">
+                    <select (change)="selectChange(item.id, $event)"  style="width: 100px;"  class="form-select" aria-label="Default select example">
+                        <option 
+                            *ngFor="let product_option of productCount" 
+                            [ngValue]="product_option"
+                            [selected]="item.option === product_option">
+                            {{ product_option }}
+                        </option>
+                    </select>     
+      </div>
+      <div class="product-item-detail">
+        <button (click)="removeCart(item.id)"  class="product-item-detail btn btn-primary">Remove</button>
+      </div>
+    </div>
+  </div>
+   <div class="cart-item"><b>Total Price: ${{ totalPrice }}</b></div>
+  </div>
+
+  <div class="right">
+     <form #form="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>FULL NAME</label>
+        <input class="form-control " type="text" name="Full Name" placeholder="(Minimum of 5 Characters)" required minlength="5"  [(ngModel)]="username">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" type="text" name="Address" placeholder="(Minimum of 5 Characters)" required minlength="5" [(ngModel)]="address">
+      </div>
+      <div class="form-group">
+        <label>CreditCard</label>
+        <input class="form-control" type="text" name="CreditCard Number" placeholder="(16-Digits Only)"required minlength="16" maxlength="16" [(ngModel)]="credit">
+      </div>
+      <br>
+      <div><button class="product-detail btn btn-primary" type="submit" [disabled]="form.invalid">Submit</button></div>
+    </form>
+  </div>
+
+ 
+</div>
+
+

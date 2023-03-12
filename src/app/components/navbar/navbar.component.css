@@ -1,0 +1,20 @@
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: left;
+    background: #3385E5;
+    padding: 20px 200px 20px 200px;
+}
+.title {
+    background: #3385E5;background: #3385E5;
+}
+h3{
+    color:#ffffff;
+    font-weight: bold;
+
+}
+a {
+    color: #ffffff;
+    font-weight: bold;
+}
