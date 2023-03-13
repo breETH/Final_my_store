@@ -10,7 +10,7 @@
       <div>{{ item.price }} birr </div>
       <div>{{item.description}}</div>
       <div class="product-item-detail">
-                    <select (change)="selectChange(item.id, $event)"  style="width: 100px;"  class="form-select" aria-label="Default select example">
+                    <select  (ngModelchange)="selectChange(item.id, $event)"  style="width: 100px;"  class="form-select" aria-label="Default select example">
                         <option 
                             *ngFor="let product_option of productCount" 
                             [ngValue]="product_option"
@@ -39,7 +39,7 @@
       </div>
       <div class="form-group">
         <label>CreditCard</label>
-        <input class="form-control" type="text" name="CreditCard Number" placeholder="(16-Digits Only)"required minlength="16" maxlength="16" [(ngModel)]="credit">
+        <input class="form-control" type="number" name="CreditCard Number" placeholder="(16-Digits Only)"required minlength="16" maxlength="16" [(ngModel)]="credit">
       </div>
       <br>
       <div><button class="product-detail btn btn-primary" type="submit" [disabled]="form.invalid">Submit</button></div>
